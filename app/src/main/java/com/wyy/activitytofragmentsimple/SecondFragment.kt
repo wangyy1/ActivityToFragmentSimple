@@ -1,14 +1,13 @@
 package com.wyy.activitytofragmentsimple
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.wyy.activitytofragmentsimple.databinding.FragmentMainMyBinding
 import com.wyy.activitytofragmentsimple.databinding.FragmentSecondBinding
-import com.wyy.activitytofragmentsimple.ui.home.HomeFragment
 import java.util.*
 
 /**
@@ -22,12 +21,12 @@ class SecondFragment : Fragment() {
 
     private val binding get() = _binding!!
 
-    private var myMainActivity: MyMainActivity? = null
+    private var homeActivity: HomeActivity? = null
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is MyMainActivity) {
-            myMainActivity = context
+        if (context is HomeActivity) {
+            homeActivity = context
         }
     }
 
@@ -41,11 +40,11 @@ class SecondFragment : Fragment() {
 
         binding.toolbar.apply {
             setNavigationOnClickListener {
-                myMainActivity?.popFragment()
+                homeActivity?.popFragment()
             }
         }
         binding.btnMain.setOnClickListener {
-            myMainActivity?.addFragment(SecondFragment::class.java)
+            startActivity(Intent(activity, ThirdActivity::class.java))
         }
         return binding.root
     }

@@ -22,7 +22,7 @@
         android:id="@+id/fragment_container_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.wyy.activitytofragmentsimple.MyMainFragment"
+        android:name="com.wyy.activitytofragmentsimple.MyHomeFragment"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

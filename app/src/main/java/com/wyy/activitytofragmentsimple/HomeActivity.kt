@@ -6,17 +6,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
-import com.wyy.activitytofragmentsimple.databinding.ActivityMainMyBinding
+import com.wyy.activitytofragmentsimple.databinding.ActivityHomeBinding
 
-class MyMainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainMyBinding
+    private lateinit var binding: ActivityHomeBinding
 
     private lateinit var fragmentManager: FragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainMyBinding.inflate(layoutInflater)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         fragmentManager = supportFragmentManager
